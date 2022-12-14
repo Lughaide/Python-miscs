@@ -1,0 +1,40 @@
+Thông_báo có nhiều điểm mới
+Cô thông_báo thời_gian học bù
+Học_sinh có nhiều thời_gian
+Bé mới sinh
+
+thông_báo 2/17
+có 2/17
+nhiều 2/17
+điểm 1/17
+mới 2/17
+học_sinh 1/17
+cô 1/17
+bé 1/17
+học 1/17
+bù 1/17
+thời_gian 2/17
+sinh 1/17
+
+Tách từ cho câu: Học sinh mới học
+*    Maximum matching:
++ Chọn kích thước từ lớn nhất là 3 tiếng
++ Xét các từ ngữ:
+    "học sinh mới" not in D
+    "học sinh" in D -> có từ "học sinh"
+    "mới học" not in D
+    "mới" in D -> có từ "mới"
+    "học" in D -> có từ "học"
+Kết quả: học_sinh mới học
+
+*    WFST:
+    Mạng chuyển đổi trạng thái cho câu trên
+        4.08      3.08    4.08
+S--> học_sinh --> mới --> học --> E
+|                  ^
+|   4.08    4.08   |
+|-> học --> sinh   |
+
+    Tìm đường đi ngắn nhất trong mạng WFD
+    1 --> 3 --> 4 --> 5
+Kết quả: học_sinh mới học
